@@ -1,5 +1,7 @@
 # Fuzzy-Swagger
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/90e749fdf9cda775a2f4/maintainability)](https://codeclimate.com/github/namuan/fuzzy-swagger/maintainability)
+
 API fuzz testing generator using swagger document.
 
 ## Motivation
