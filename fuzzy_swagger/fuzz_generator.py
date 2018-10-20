@@ -1,16 +1,26 @@
-from random import randint
+from random import randint, uniform, getrandbits
+
+with open('test_data/blns.txt') as f:
+    string_data = [l.rstrip() for l in f if not l.strip().startswith('#')]
 
 
-def rand_int(upper_limit):
-    return randint(0, upper_limit)
+def rand_int(upper_limit, lower_limit=0):
+    return randint(lower_limit, upper_limit)
 
 
 def fuzz_boolean(boolean_schema):
-    return True
+    return bool(getrandbits(1))
 
 
 def fuzz_date_time():
-    return "2000-01-23T04:56:07.000+00:00"
+    year = rand_int(3000, 1900)
+    month = rand_int(12, 1)
+    day = rand_int(30, 1)
+    hour = rand_int(24, 1)
+    minute = rand_int(60, 1)
+    second = rand_int(60, 1)
+
+    return "%s-%02d-%02dT%02d:%02d:%02d.000+00:00" % (year, month, day, hour, minute, second)
 
 
 def fuzz_string(string_schema):
@@ -23,11 +33,12 @@ def fuzz_string(string_schema):
     if string_format == 'date-time':
         return fuzz_date_time()
 
-    return "something"
+    random_index = rand_int(len(string_data) - 1)
+    return string_data[random_index]
 
 
 def fuzz_int(int_schema):
-    return 5
+    return int(uniform(-1 * 1000000000, 1 * 1000000000))
 
 
 def fuzz_file(file_schema):
