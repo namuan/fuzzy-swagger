@@ -2,6 +2,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/90e749fdf9cda775a2f4/maintainability)](https://codeclimate.com/github/namuan/fuzzy-swagger/maintainability)
 
+[![CircleCI](https://circleci.com/gh/namuan/fuzzy-swagger.svg?style=svg)](https://circleci.com/gh/namuan/fuzzy-swagger)
+
 API fuzz testing generator using swagger document.
 
 ## Motivation
