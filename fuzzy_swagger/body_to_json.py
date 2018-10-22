@@ -1,4 +1,4 @@
-from .fuzz_generator import *
+from fuzzy_swagger.fuzz_generator import *
 
 
 def json_from_schema(body_type, body_schema):

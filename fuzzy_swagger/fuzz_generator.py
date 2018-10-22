@@ -1,6 +1,7 @@
+import os
 from random import randint, uniform, getrandbits
 
-with open('test_data/blns.txt') as f:
+with open(os.path.dirname(os.path.realpath(__file__)) + '/blns.txt') as f:
     string_data = [l.rstrip() for l in f if not l.strip().startswith('#')]
 
 

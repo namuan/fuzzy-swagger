@@ -1,1 +1,2 @@
+include fuzzy_swagger/blns.txt
 include requirements.txt

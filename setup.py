@@ -38,6 +38,7 @@ setup(name='fuzzy-swagger',
       url='https://github.com/namuan/fuzzy-swagger',
       install_requires=[],
       packages=find_packages(exclude=['pypandoc']),
+      include_package_data=True,
       entry_points={
         "console_scripts": [
             'fuzzy-swagger = fuzzy_swagger.fuzzy_swagger:main'
@@ -53,4 +54,4 @@ setup(name='fuzzy-swagger',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         ]
-     )
+      )

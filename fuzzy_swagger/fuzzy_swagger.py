@@ -4,10 +4,10 @@ from __future__ import print_function
 
 import argparse
 
-from .logger import *
-from .orchestra import play
+from fuzzy_swagger.logger import *
+from fuzzy_swagger.orchestra import play
 
-__version__ = '0.1.1'
+__version__ = '0.1.8'
 
 
 def parse_args():

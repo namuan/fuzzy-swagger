@@ -1,7 +1,7 @@
-from .body_to_json import json_from_schema
-from .logger import *
-from .request_factory import create_request
-from .swagger_doc import retrieve_swagger_doc
+from fuzzy_swagger.body_to_json import json_from_schema
+from fuzzy_swagger.logger import *
+from fuzzy_swagger.request_factory import create_request
+from fuzzy_swagger.swagger_doc import retrieve_swagger_doc
 
 
 def play(swagger_doc, server):

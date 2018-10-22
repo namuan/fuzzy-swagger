@@ -1,5 +1,5 @@
 from prance import ResolvingParser
-from .logger import *
+from fuzzy_swagger.logger import *
 
 
 def retrieve_swagger_doc(swagger_file):

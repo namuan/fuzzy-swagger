@@ -1,7 +1,7 @@
 import requests
 
-from .fuzz_generator import *
-from .logger import *
+from fuzzy_swagger.fuzz_generator import *
+from fuzzy_swagger.logger import *
 
 
 def create_request(server, base_path, http_method, path, path_params, query_params, form_data_params, body_json):
