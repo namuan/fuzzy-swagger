@@ -36,7 +36,10 @@ setup(name='fuzzy-swagger',
       author='Nauman Leghari',
       author_email='nauman@docker-files.com',
       url='https://github.com/namuan/fuzzy-swagger',
-      install_requires=[],
+      install_requires=[
+          "requests>=2.19.1",
+          "prance"
+      ],
       packages=find_packages(exclude=['pypandoc']),
       include_package_data=True,
       entry_points={
