@@ -7,7 +7,7 @@ import argparse
 from fuzzy_swagger.logger import *
 from fuzzy_swagger.orchestra import play
 
-__version__ = '0.1.10'
+__version__ = '0.1.11'
 
 
 def parse_args():
