@@ -12,7 +12,7 @@ jsonpointer==1.14
 lazy-object-proxy==1.3.1
 mccabe==0.6.1
 prance==0.13.2
-pylint==2.1.1
+pylint==2.7.0
 python-dateutil==2.7.3
 PyYAML==5.4
 requests==2.20.0
