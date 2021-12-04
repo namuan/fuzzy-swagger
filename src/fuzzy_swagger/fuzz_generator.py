@@ -10,7 +10,7 @@ def rand_int(upper_limit: int, lower_limit: int = 0) -> int:
     return randint(lower_limit, upper_limit)
 
 
-def fuzz_boolean(boolean_schema: Any) -> bool:
+def fuzz_boolean(_: Any) -> bool:
     return bool(getrandbits(1))
 
 
