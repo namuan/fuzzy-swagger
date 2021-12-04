@@ -1,0 +1,97 @@
+[tool.poetry]
+name = "fuzzy-swagger"
+version = "0.0.1"
+description = "API fuzz testing generator using swagger document."
+authors = [
+    "namuan <github@deskriders.dev>",
+]
+license = "MIT"
+readme = "README.md"
+
+documentation = "https://namuan.github.io/fuzzy-swagger"
+homepage = "https://namuan.github.io/fuzzy-swagger"
+repository = "https://github.com/namuan/fuzzy-swagger"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+packages = [
+    { include = "fuzzy_swagger", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7.1, <4.0"
+fire = "*"
+
+[tool.poetry.dev-dependencies]
+autoflake = "*"
+black = "*"
+flake8 = "*"
+flake8-bugbear = "*"
+flake8-builtins = "*"
+flake8-comprehensions = "*"
+flake8-debugger = "*"
+flake8-logging-format = "*"
+isort = "*"
+mkdocstrings = "*"
+mkdocs-material = "*"
+mypy = "*"
+pep8-naming = "*"
+pre-commit = "*"
+pymdown-extensions = "*"
+pytest = "*"
+pytest-cov = "*"
+python-kacl = "*"
+pyupgrade = "*"
+tryceratops = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "tests"]
+
+[tool.black]
+target-version = ["py37", "py38", "py39"]
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+addopts = """\
+    --cov fuzzy_swagger \
+    --cov tests \
+    --cov-report term-missing \
+    --no-cov-on-fail \
+"""
+
+[tool.coverage.report]
+fail_under = 100
+exclude_lines = [
+    'if TYPE_CHECKING:',
+    'pragma: no cover'
+]
+
+[tool.mypy]
+disallow_any_unimported = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+check_untyped_defs = true
+show_error_codes = true
+
+[tool.poetry.scripts]
+fuzzy-swagger = 'fuzzy_swagger.console:cli'

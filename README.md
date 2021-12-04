@@ -1,18 +1,27 @@
-# Fuzzy-Swagger
+# fuzzy-swagger
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/90e749fdf9cda775a2f4/maintainability)](https://codeclimate.com/github/namuan/fuzzy-swagger/maintainability)
+[![PyPI](https://img.shields.io/pypi/v/fuzzy-swagger?style=flat-square)](https://pypi.python.org/pypi/fuzzy-swagger/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fuzzy-swagger?style=flat-square)](https://pypi.python.org/pypi/fuzzy-swagger/)
+[![PyPI - License](https://img.shields.io/pypi/l/fuzzy-swagger?style=flat-square)](https://pypi.python.org/pypi/fuzzy-swagger/)
+[![Coookiecutter - Wolt](https://img.shields.io/badge/cookiecutter-Wolt-00c2e8?style=flat-square&logo=cookiecutter&logoColor=D4AA00&link=https://github.com/woltapp/wolt-python-package-cookiecutter)](https://github.com/woltapp/wolt-python-package-cookiecutter)
 
-[![CircleCI](https://circleci.com/gh/namuan/fuzzy-swagger.svg?style=svg)](https://circleci.com/gh/namuan/fuzzy-swagger)
+
+---
+
+**Documentation**: [https://namuan.github.io/fuzzy-swagger](https://namuan.github.io/fuzzy-swagger)
+
+**Source Code**: [https://github.com/namuan/fuzzy-swagger](https://github.com/namuan/fuzzy-swagger)
+
+**PyPI**: [https://pypi.org/project/fuzzy-swagger/](https://pypi.org/project/fuzzy-swagger/)
+
+---
 
 API fuzz testing generator using swagger document.
 
-## Motivation
-
-
 ## Installation
 
-```shell
-$ pip install fuzzy-swagger
+```sh
+pip install fuzzy-swagger
 ```
 
 ## Example Usage
@@ -21,23 +30,26 @@ $ pip install fuzzy-swagger
 $ fuzzy-swagger --swagger http://localhost:8080/api-docs --server http://localhost:8080
 ```
 
-## Running locally
+## Development
 
-```
-$ python local_main.py --swagger http://localhost:8080/api-docs --server http://localhost:8080
-```
+* Clone this repository
+* Requirements:
+  * [Poetry](https://python-poetry.org/)
+  * Python 3.7+
+* Create a virtual environment and install the dependencies
 
-## Verbose debugging
-
-To turn on verbose output for debugging, set the `--verbose` argument.
-
-## Publishing Updates to PyPi
-
-For the maintainer, increment the version number in fuzzy_swagger.py and run the following:
-
-```shell
-docker build -f ./Dockerfile.buildenv -t namuan/fuzzy-swagger:build .
-docker run --rm -it --entrypoint python namuan/fuzzy-swagger:build setup.py publish
+```sh
+poetry install
 ```
 
-Enter the username and password for pypi.org repo when prompted
+* Activate the virtual environment
+
+```sh
+poetry shell
+```
+
+### Testing
+
+```sh
+pytest
+```

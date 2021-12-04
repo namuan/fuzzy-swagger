@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/woltapp/wolt-python-package-cookiecutter",
+  "commit": "b508f7b51bc2d74d6c343cb15b94e6ec9c83355f",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author_name": "Deskriders Dev",
+      "author_email": "github@deskriders.dev",
+      "github_username": "namuan",
+      "project_name": "fuzzy-swagger",
+      "project_slug": "fuzzy-swagger",
+      "package_name": "fuzzy_swagger",
+      "project_short_description": "API fuzz testing generator using swagger document.",
+      "_template": "https://github.com/woltapp/wolt-python-package-cookiecutter"
+    }
+  },
+  "directory": null
+}
