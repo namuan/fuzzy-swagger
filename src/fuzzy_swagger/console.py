@@ -2,6 +2,8 @@ import logging
 
 import fire  # type: ignore
 
+from fuzzy_swagger.orchestra import play
+
 logging.basicConfig(
     handlers=[
         logging.StreamHandler(),
@@ -15,9 +17,11 @@ logging.captureWarnings(capture=True)
 
 def main(swagger: str, server: str) -> None:
     logging.info(
-        "Checking {swagger} and running tests against {server}",
-        extra={"swagger": swagger, "server": server},
+        "Checking %s and running tests against %s",
+        swagger,
+        server,
     )
+    play(swagger, server)
 
 
 def cli() -> None:
