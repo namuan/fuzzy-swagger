@@ -50,13 +50,13 @@ def create_request(
     if http_method == "get":
         headers: Dict[str, str] = {}
         get_response: Response = requests.get(
-            full_path, headers=headers, params=payload
+            full_path, headers=headers, params=payload, timeout=30
         )
         process_response(http_method, url, path, get_response)
     elif http_method == "post":
         headers = {"Content-Type": content_type}
         post_response: Response = requests.post(
-            full_path, headers=headers, params=payload, json=body_json
+            full_path, headers=headers, params=payload, json=body_json, timeout=30
         )
         process_response(http_method, url, path, post_response)
 

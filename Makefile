@@ -14,7 +14,7 @@ clean: ## Clean package
 
 pre-commit: ## Manually run all precommit hooks
 	pre-commit install
-	pre-commit run --all-files
+	poetry run pre-commit run --all-files
 
 .PHONY: help
 .DEFAULT_GOAL := help

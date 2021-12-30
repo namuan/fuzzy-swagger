@@ -53,3 +53,14 @@ repos:
         language: system
         files: 'CHANGELOG.md'
         pass_filenames: false
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v2.30.0
+    hooks:
+      -   id: pyupgrade
+-   repo: https://github.com/returntocorp/semgrep
+    rev: 'v0.77.0'
+    hooks:
+      - id: semgrep
+        name: Semgrep Python / Bandit
+        types: [ python ]
+        args: [ '--config', 'p/python', '--config', 'p/bandit', '--error' ]
